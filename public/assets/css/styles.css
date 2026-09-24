@@ -1,0 +1,61 @@
+/* BASE: conserva estas reglas y desarrolla las tareas de la guía. */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #0d1b2a;
+  background: #f5f7fa;
+}
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+}
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+.site-header {
+  background: #0d1b2a;
+  color: white;
+  padding-block: 1rem;
+}
+.site-header :focus-visible {
+  outline-color: white;
+}
+nav a {
+  display: inline-block;
+  padding: 0.75rem;
+}
+section {
+  padding-block: 1rem;
+}
+.skip-link {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+}
+.skip-link:focus {
+  top: 1rem;
+  padding: 1rem;
+  background: white;
+}
+
+/* TODO S3.3: navbar con Flexbox y menú mobile first.
+   Añadir .js-menu .navbar__menu y .is-open según sección 4.
+   Ampliar con min-width: 768px y 1024px. */
+/* TODO S3.4: hero y CTA de al menos 44px de alto. */
+/* TODO S4.1: catálogo con Grid y tarjeta destacada.
+   span 2 debe aplicarse solo desde 768px. */
+/* TODO S4.3: formulario, ayudas, estados y foco visible.
+   No ocultar errores con overflow-x: hidden. */
