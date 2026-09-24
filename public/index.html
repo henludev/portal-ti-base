@@ -3,46 +3,246 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portal TI | Proyecto base de la semana 2</title>
+    <meta
+      name="description"
+      content="Portal de Nova Servicios para consultar servicios de TI, revisar preguntas frecuentes y simular una solicitud de soporte."
+    />
+    <title>Nova Servicios | Portal de soporte TI</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="assets/js/ui.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header class="site-header">
-      <!-- TODO S3.1: implementar el navbar de la sección 3 de la guía.
-           Mantener los selectores .navbar, .navbar__toggle y #nav-menu
-           para que funcione el apoyo ui.js. -->
-      <nav class="container" aria-label="Navegación principal">
-        <a href="#inicio">Portal TI</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#soporte">Soporte</a>
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a class="navbar__logo" href="#inicio">Nova Servicios</a>
+        <button
+          class="navbar__toggle"
+          type="button"
+          hidden
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          Menú
+        </button>
+        <ul class="navbar__menu" id="nav-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a class="nav-cta" href="#soporte">Solicitar soporte</a></li>
+        </ul>
       </nav>
     </header>
-    <main id="contenido" class="container" tabindex="-1">
-      <section id="inicio" aria-labelledby="hero-title">
-        <!-- TODO S3.2: crear el hero, mensaje para el usuario y CTA. -->
-        <h1 id="hero-title">Portal de Soporte TI</h1>
-        <p>Proyecto base de las sesiones 3 y 4. Completa las actividades de la guía.</p>
+
+    <main id="contenido" tabindex="-1">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero__content">
+          <div>
+            <p class="eyebrow">Portal interno de TI</p>
+            <h1 id="hero-title">Resuelve tus incidencias con Nova Servicios</h1>
+            <p class="hero__lead">
+              Consulta nuestros servicios, encuentra respuestas rápidas y valida una solicitud de soporte
+              en pocos pasos. Esta web es una demostración y utiliza únicamente datos ficticios.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#soporte">Solicitar soporte</a>
+              <a class="button button--secondary" href="#servicios">Ver servicios</a>
+            </div>
+          </div>
+          <aside class="hero__note" aria-label="Información de atención">
+            <strong>Atención TI</strong>
+            <span>Lunes a viernes, 08:00–18:00</span>
+            <span>Respuesta orientativa: dentro del horario laboral</span>
+          </aside>
+        </div>
       </section>
-      <section id="servicios" aria-labelledby="services-title">
-        <h2 id="services-title">Servicios de soporte</h2>
-        <!-- TODO S4.1: cuatro article dentro de .services__grid.
-             Red, Prioritario, Hardware y Software. -->
-        <p>Catálogo pendiente de implementar.</p>
+
+      <section class="section" id="servicios" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Catálogo</p>
+            <h2 id="services-title">Servicios de TI</h2>
+            <p>Elige el servicio que mejor describe tu necesidad. Todos los accesos llevan directamente al formulario.</p>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card service-card--featured">
+              <span class="service-card__tag">Más consultado</span>
+              <h3>Conectividad y red</h3>
+              <p>Diagnóstico de Wi-Fi, red cableada, VPN y problemas para acceder a recursos internos.</p>
+              <a href="#soporte">Solicitar soporte de red <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="service-card">
+              <h3>Hardware</h3>
+              <p>Ayuda con ordenadores, periféricos, pantallas, impresoras y fallos físicos del puesto.</p>
+              <a href="#soporte">Solicitar soporte de hardware <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="service-card">
+              <h3>Software</h3>
+              <p>Asistencia con aplicaciones corporativas, actualizaciones, errores de ejecución y configuración.</p>
+              <a href="#soporte">Solicitar soporte de software <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="service-card">
+              <h3>Accesos y cuentas</h3>
+              <p>Orientación para incidencias de acceso a herramientas, permisos y cuentas de trabajo.</p>
+              <a href="#soporte">Solicitar soporte de acceso <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
       </section>
-      <section id="soporte" aria-labelledby="support-title">
-        <h2 id="support-title">Solicitud de soporte</h2>
-        <!-- TODO S4.2: agregar aquí el FORM de las secciones 7 y 8.
-             Ya existe el section: no dupliques el id soporte.
-             Usar #support-form, #submit-demo y #form-status.
-             El botón submit comienza disabled y ui.js lo habilita.
-             No usar novalidate. -->
-        <p>Formulario pendiente. Esta práctica solo utilizará datos ficticios.</p>
+
+      <section class="section section--muted" id="soporte" aria-labelledby="support-title">
+        <div class="container support-layout">
+          <div class="support-copy">
+            <p class="eyebrow">Simulación</p>
+            <h2 id="support-title">Valida una solicitud de soporte</h2>
+            <p>
+              Completa los datos para comprobar la validación del formulario. No se crea un ticket real y ninguna
+              información se envía ni se guarda.
+            </p>
+            <ul class="check-list">
+              <li>Nombre de al menos 3 caracteres.</li>
+              <li>Correo electrónico válido.</li>
+              <li>Tipo y prioridad obligatorios.</li>
+              <li>Descripción de 10 a 500 caracteres.</li>
+            </ul>
+          </div>
+
+          <form class="support-form" id="support-form">
+            <p class="form-note"><strong>Importante:</strong> usa datos ficticios para esta demostración.</p>
+
+            <fieldset>
+              <legend>Datos de contacto</legend>
+              <label for="nombre">Nombre completo *</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                required
+                minlength="3"
+                autocomplete="name"
+                aria-describedby="nombre-help"
+              />
+              <small id="nombre-help">Escribe tu nombre usando al menos 3 caracteres.</small>
+
+              <label for="email">Correo electrónico *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                aria-describedby="email-help"
+              />
+              <small id="email-help">Ejemplo para la práctica: ana@example.test.</small>
+            </fieldset>
+
+            <fieldset>
+              <legend>Datos de la incidencia</legend>
+              <label for="tipo">Tipo de incidencia *</label>
+              <select id="tipo" name="tipo" required aria-describedby="tipo-help">
+                <option value="">Selecciona una opción</option>
+                <option value="red">Red</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+                <option value="acceso">Acceso</option>
+              </select>
+              <small id="tipo-help">Selecciona el área que representa mejor el problema.</small>
+
+              <fieldset class="priority" aria-describedby="priority-help">
+                <legend>Prioridad *</legend>
+                <label><input type="radio" name="prioridad" value="alta" required /> Alta</label>
+                <label><input type="radio" name="prioridad" value="media" /> Media</label>
+                <label><input type="radio" name="prioridad" value="baja" /> Baja</label>
+                <small id="priority-help">Elige una sola prioridad según el impacto del problema.</small>
+              </fieldset>
+
+              <label for="descripcion">Descripción del problema *</label>
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                rows="6"
+                required
+                minlength="10"
+                maxlength="500"
+                aria-describedby="descripcion-help"
+              ></textarea>
+              <small id="descripcion-help">Escribe entre 10 y 500 caracteres. No incluyas contraseñas.</small>
+            </fieldset>
+
+            <button class="button button--primary form-submit" id="submit-demo" type="submit" disabled>
+              Validar solicitud de prueba
+            </button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <noscript>Activa JavaScript para ejecutar la confirmación de esta simulación.</noscript>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="preguntas" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Ayuda rápida</p>
+            <h2 id="faq-title">Preguntas frecuentes</h2>
+            <p>Información ficticia pensada para resolver las dudas más habituales antes de solicitar soporte.</p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-category">
+              <h3>Antes de solicitar soporte</h3>
+              <article class="faq-item">
+                <h4>¿Qué información debo preparar?</h4>
+                <p>Indica qué ocurre, desde cuándo sucede y qué equipo o aplicación está afectado.</p>
+              </article>
+              <article class="faq-item">
+                <h4>¿Puedo solicitar ayuda desde el móvil?</h4>
+                <p>Sí. El portal está diseñado con prioridad móvil y el formulario se adapta a pantallas pequeñas.</p>
+              </article>
+              <article class="faq-item">
+                <h4>¿Qué prioridad debo elegir?</h4>
+                <p>Alta corresponde a una interrupción importante; media a una incidencia con alternativa de trabajo; baja a una consulta o problema menor.</p>
+              </article>
+            </div>
+
+            <div class="faq-category">
+              <h3>Atención y seguimiento</h3>
+              <article class="faq-item">
+                <h4>¿Cuándo atiende el equipo de TI?</h4>
+                <p>El horario ficticio de atención es de lunes a viernes, de 08:00 a 18:00.</p>
+              </article>
+              <article class="faq-item">
+                <h4>¿Este formulario crea un ticket real?</h4>
+                <p>No. Es una simulación académica: la validación se realiza en el navegador y no se envían ni guardan datos.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+        <div class="container contact-card">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h2 id="contact-title">¿Necesitas orientación?</h2>
+            <p>Para esta práctica, el canal de contacto es ficticio y sirve únicamente como información de referencia.</p>
+          </div>
+          <address>
+            <strong>Mesa de ayuda Nova Servicios</strong>
+            <span>Correo: soporte@nova.com</span>
+            <span>Teléfono: +51 555 010 2040</span>
+            <span>Horario: lunes a viernes, 08:00–18:00</span>
+          </address>
+        </div>
       </section>
     </main>
-    <footer class="container">
-      <p>Portal TI de práctica. No registra tickets reales.</p>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><strong>Nova Servicios</strong> · Portal académico de práctica.</p>
+        <p>No registra tickets reales ni conserva información enviada mediante este formulario.</p>
+      </div>
     </footer>
   </body>
 </html>
