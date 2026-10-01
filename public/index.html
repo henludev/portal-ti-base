@@ -45,8 +45,9 @@
             <p class="eyebrow">Portal interno de TI</p>
             <h1 id="hero-title">Resuelve tus incidencias con Nova Servicios</h1>
             <p class="hero__lead">
-              Consulta nuestros servicios, encuentra respuestas rápidas y valida una solicitud de soporte
-              en pocos pasos. Esta web es una demostración y utiliza únicamente datos ficticios.
+              Consulta nuestros servicios, encuentra respuestas rápidas y valida una
+              solicitud de soporte en pocos pasos. Esta web es una demostración y utiliza
+              únicamente datos ficticios.
             </p>
             <div class="hero__actions">
               <a class="button button--primary" href="#soporte">Solicitar soporte</a>
@@ -66,43 +67,70 @@
           <div class="section-heading">
             <p class="eyebrow">Catálogo</p>
             <h2 id="services-title">Servicios de TI</h2>
-            <p>Elige el servicio que mejor describe tu necesidad. Todos los accesos llevan directamente al formulario.</p>
+            <p>
+              Elige el servicio que mejor describe tu necesidad. Todos los accesos llevan
+              directamente al formulario.
+            </p>
           </div>
 
           <div class="services__grid">
             <article class="service-card service-card--featured">
               <span class="service-card__tag">Más consultado</span>
               <h3>Conectividad y red</h3>
-              <p>Diagnóstico de Wi-Fi, red cableada, VPN y problemas para acceder a recursos internos.</p>
-              <a href="#soporte">Solicitar soporte de red <span aria-hidden="true">→</span></a>
+              <p>
+                Diagnóstico de Wi-Fi, red cableada, VPN y problemas para acceder a
+                recursos internos.
+              </p>
+              <a href="#soporte"
+                >Solicitar soporte de red <span aria-hidden="true">→</span></a
+              >
             </article>
             <article class="service-card">
               <h3>Hardware</h3>
-              <p>Ayuda con ordenadores, periféricos, pantallas, impresoras y fallos físicos del puesto.</p>
-              <a href="#soporte">Solicitar soporte de hardware <span aria-hidden="true">→</span></a>
+              <p>
+                Ayuda con ordenadores, periféricos, pantallas, impresoras y fallos físicos
+                del puesto.
+              </p>
+              <a href="#soporte"
+                >Solicitar soporte de hardware <span aria-hidden="true">→</span></a
+              >
             </article>
             <article class="service-card">
               <h3>Software</h3>
-              <p>Asistencia con aplicaciones corporativas, actualizaciones, errores de ejecución y configuración.</p>
-              <a href="#soporte">Solicitar soporte de software <span aria-hidden="true">→</span></a>
+              <p>
+                Asistencia con aplicaciones corporativas, actualizaciones, errores de
+                ejecución y configuración.
+              </p>
+              <a href="#soporte"
+                >Solicitar soporte de software <span aria-hidden="true">→</span></a
+              >
             </article>
             <article class="service-card">
               <h3>Accesos y cuentas</h3>
-              <p>Orientación para incidencias de acceso a herramientas, permisos y cuentas de trabajo.</p>
-              <a href="#soporte">Solicitar soporte de acceso <span aria-hidden="true">→</span></a>
+              <p>
+                Orientación para incidencias de acceso a herramientas, permisos y cuentas
+                de trabajo.
+              </p>
+              <a href="#soporte"
+                >Solicitar soporte de acceso <span aria-hidden="true">→</span></a
+              >
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--muted" id="soporte" aria-labelledby="support-title">
+      <section
+        class="section section--muted"
+        id="soporte"
+        aria-labelledby="support-title"
+      >
         <div class="container support-layout">
           <div class="support-copy">
             <p class="eyebrow">Simulación</p>
             <h2 id="support-title">Valida una solicitud de soporte</h2>
             <p>
-              Completa los datos para comprobar la validación del formulario. No se crea un ticket real y ninguna
-              información se envía ni se guarda.
+              Completa los datos para comprobar la validación del formulario. No se crea
+              un ticket real y ninguna información se envía ni se guarda.
             </p>
             <ul class="check-list">
               <li>Nombre de al menos 3 caracteres.</li>
@@ -113,7 +141,9 @@
           </div>
 
           <form class="support-form" id="support-form">
-            <p class="form-note"><strong>Importante:</strong> usa datos ficticios para esta demostración.</p>
+            <p class="form-note">
+              <strong>Importante:</strong> usa datos ficticios para esta demostración.
+            </p>
 
             <fieldset>
               <legend>Datos de contacto</legend>
@@ -127,7 +157,9 @@
                 autocomplete="name"
                 aria-describedby="nombre-help"
               />
-              <small id="nombre-help">Escribe tu nombre usando al menos 3 caracteres.</small>
+              <small id="nombre-help"
+                >Escribe tu nombre usando al menos 3 caracteres.</small
+              >
 
               <label for="email">Correo electrónico *</label>
               <input
@@ -151,14 +183,21 @@
                 <option value="software">Software</option>
                 <option value="acceso">Acceso</option>
               </select>
-              <small id="tipo-help">Selecciona el área que representa mejor el problema.</small>
+              <small id="tipo-help"
+                >Selecciona el área que representa mejor el problema.</small
+              >
 
               <fieldset class="priority" aria-describedby="priority-help">
                 <legend>Prioridad *</legend>
-                <label><input type="radio" name="prioridad" value="alta" required /> Alta</label>
+                <label
+                  ><input type="radio" name="prioridad" value="alta" required />
+                  Alta</label
+                >
                 <label><input type="radio" name="prioridad" value="media" /> Media</label>
                 <label><input type="radio" name="prioridad" value="baja" /> Baja</label>
-                <small id="priority-help">Elige una sola prioridad según el impacto del problema.</small>
+                <small id="priority-help"
+                  >Elige una sola prioridad según el impacto del problema.</small
+                >
               </fieldset>
 
               <label for="descripcion">Descripción del problema *</label>
@@ -171,14 +210,24 @@
                 maxlength="500"
                 aria-describedby="descripcion-help"
               ></textarea>
-              <small id="descripcion-help">Escribe entre 10 y 500 caracteres. No incluyas contraseñas.</small>
+              <small id="descripcion-help"
+                >Escribe entre 10 y 500 caracteres. No incluyas contraseñas.</small
+              >
             </fieldset>
 
-            <button class="button button--primary form-submit" id="submit-demo" type="submit" disabled>
+            <button
+              class="button button--primary form-submit"
+              id="submit-demo"
+              type="submit"
+              disabled
+            >
               Validar solicitud de prueba
             </button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            <noscript>Activa JavaScript para ejecutar la confirmación de esta simulación.</noscript>
+            <noscript
+              >Activa JavaScript para ejecutar la confirmación de esta
+              simulación.</noscript
+            >
           </form>
         </div>
       </section>
@@ -189,8 +238,8 @@
             <p class="eyebrow">Seguimiento</p>
             <h2 id="states-title">Estados de solicitudes</h2>
             <p>
-              Ejemplos ficticios de solicitudes para mostrar cómo podría visualizarse
-              el estado de atención de un caso.
+              Ejemplos ficticios de solicitudes para mostrar cómo podría visualizarse el
+              estado de atención de un caso.
             </p>
           </div>
 
@@ -242,8 +291,8 @@
           </div>
 
           <p class="section-note">
-            <strong>Nota:</strong> todos los registros mostrados son ficticios y
-            forman parte de la demostración académica.
+            <strong>Nota:</strong> todos los registros mostrados son ficticios y forman
+            parte de la demostración académica.
           </p>
         </div>
       </section>
@@ -253,7 +302,10 @@
           <div class="section-heading">
             <p class="eyebrow">Ayuda rápida</p>
             <h2 id="faq-title">Preguntas frecuentes</h2>
-            <p>Información ficticia pensada para resolver las dudas más habituales antes de solicitar soporte.</p>
+            <p>
+              Información ficticia pensada para resolver las dudas más habituales antes de
+              solicitar soporte.
+            </p>
           </div>
 
           <div class="faq-grid">
@@ -261,15 +313,24 @@
               <h3>Antes de solicitar soporte</h3>
               <article class="faq-item">
                 <h4>¿Qué información debo preparar?</h4>
-                <p>Indica qué ocurre, desde cuándo sucede y qué equipo o aplicación está afectado.</p>
+                <p>
+                  Indica qué ocurre, desde cuándo sucede y qué equipo o aplicación está
+                  afectado.
+                </p>
               </article>
               <article class="faq-item">
                 <h4>¿Puedo solicitar ayuda desde el móvil?</h4>
-                <p>Sí. El portal está diseñado con prioridad móvil y el formulario se adapta a pantallas pequeñas.</p>
+                <p>
+                  Sí. El portal está diseñado con prioridad móvil y el formulario se
+                  adapta a pantallas pequeñas.
+                </p>
               </article>
               <article class="faq-item">
                 <h4>¿Qué prioridad debo elegir?</h4>
-                <p>Alta corresponde a una interrupción importante; media a una incidencia con alternativa de trabajo; baja a una consulta o problema menor.</p>
+                <p>
+                  Alta corresponde a una interrupción importante; media a una incidencia
+                  con alternativa de trabajo; baja a una consulta o problema menor.
+                </p>
               </article>
             </div>
 
@@ -277,23 +338,35 @@
               <h3>Atención y seguimiento</h3>
               <article class="faq-item">
                 <h4>¿Cuándo atiende el equipo de TI?</h4>
-                <p>El horario ficticio de atención es de lunes a viernes, de 08:00 a 18:00.</p>
+                <p>
+                  El horario ficticio de atención es de lunes a viernes, de 08:00 a 18:00.
+                </p>
               </article>
               <article class="faq-item">
                 <h4>¿Este formulario crea un ticket real?</h4>
-                <p>No. Es una simulación académica: la validación se realiza en el navegador y no se envían ni guardan datos.</p>
+                <p>
+                  No. Es una simulación académica: la validación se realiza en el
+                  navegador y no se envían ni guardan datos.
+                </p>
               </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+      <section
+        class="section contact-section"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
         <div class="container contact-card">
           <div>
             <p class="eyebrow">Contacto</p>
             <h2 id="contact-title">¿Necesitas orientación?</h2>
-            <p>Para esta práctica, el canal de contacto es ficticio y sirve únicamente como información de referencia.</p>
+            <p>
+              Para esta práctica, el canal de contacto es ficticio y sirve únicamente como
+              información de referencia.
+            </p>
           </div>
           <address>
             <strong>Mesa de ayuda Nova Servicios</strong>
@@ -308,7 +381,10 @@
     <footer class="site-footer">
       <div class="container">
         <p><strong>Nova Servicios</strong> · Portal académico de práctica.</p>
-        <p>No registra tickets reales ni conserva información enviada mediante este formulario.</p>
+        <p>
+          No registra tickets reales ni conserva información enviada mediante este
+          formulario.
+        </p>
       </div>
     </footer>
   </body>

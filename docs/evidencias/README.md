@@ -1,17 +1,17 @@
 ## Capturas
 
-| Archivo | Qué demuestra | Tamaño de la imagen |
-|---|---|---|
-| `vista-320px.png` | Página completa con el menú cerrado, a 320 px de ancho. | 320 × 6874 px |
-| `vista-768px.png` | Página completa a 768 px de ancho. | 768 × 4795 px |
-| `vista-1440px.png` | Página completa a 1440 px de ancho. | 1440 × 4456 px |
-| `menu-movil-antes.jpg` | Problema real: logo, botón y enlaces compiten por una misma fila a 320 px. | 320 × 900 px |
-| `menu-movil-despues.jpg` | Corrección: logo y botón arriba; enlaces en una fila completa debajo. | 320 × 900 px |
-| `foco-teclado.jpg` | Foco visible al llegar con Tab al enlace del inicio «Solicitar soporte». | 320 × 900 px |
-| `formulario-invalido.jpg` | Nombre «An», de dos caracteres: el navegador bloquea la confirmación y marca el campo inválido. | 768 × 1000 px |
-| `formulario-valido.jpg` | Datos ficticios válidos y mensaje «Validación completada. No se envió ni guardó ningún ticket.». | 1087 × 1057 px |
-| `contraste-boton-antes.jpg` | Segunda corrección, antes: fondo oscuro y texto oscuro al recibir foco de teclado. | Viewport de 1440 × 900 px; imagen reducida proporcionalmente por la herramienta. |
-| `contraste-boton-despues.jpg` | Segunda corrección, después: fondo amarillo, texto legible y contorno de foco conservado. | Viewport de 1440 × 900 px; imagen reducida proporcionalmente por la herramienta. |
+| Archivo                       | Qué demuestra                                                                                    | Tamaño de la imagen                                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| `vista-320px.png`             | Página completa con el menú cerrado, a 320 px de ancho.                                          | 320 × 6874 px                                                                    |
+| `vista-768px.png`             | Página completa a 768 px de ancho.                                                               | 768 × 4795 px                                                                    |
+| `vista-1440px.png`            | Página completa a 1440 px de ancho.                                                              | 1440 × 4456 px                                                                   |
+| `menu-movil-antes.jpg`        | Problema real: logo, botón y enlaces compiten por una misma fila a 320 px.                       | 320 × 900 px                                                                     |
+| `menu-movil-despues.jpg`      | Corrección: logo y botón arriba; enlaces en una fila completa debajo.                            | 320 × 900 px                                                                     |
+| `foco-teclado.jpg`            | Foco visible al llegar con Tab al enlace del inicio «Solicitar soporte».                         | 320 × 900 px                                                                     |
+| `formulario-invalido.jpg`     | Nombre «An», de dos caracteres: el navegador bloquea la confirmación y marca el campo inválido.  | 768 × 1000 px                                                                    |
+| `formulario-valido.jpg`       | Datos ficticios válidos y mensaje «Validación completada. No se envió ni guardó ningún ticket.». | 1087 × 1057 px                                                                   |
+| `contraste-boton-antes.jpg`   | Segunda corrección, antes: fondo oscuro y texto oscuro al recibir foco de teclado.               | Viewport de 1440 × 900 px; imagen reducida proporcionalmente por la herramienta. |
+| `contraste-boton-despues.jpg` | Segunda corrección, después: fondo amarillo, texto legible y contorno de foco conservado.        | Viewport de 1440 × 900 px; imagen reducida proporcionalmente por la herramienta. |
 
 Las tres vistas completas conservan sus dimensiones originales. La imagen del formulario válido es una captura de un viewport de 1440 × 1400 px reducida proporcionalmente por la herramienta; no se utiliza como evidencia del ancho de 1440 px, que tiene su propia captura PNG.
 

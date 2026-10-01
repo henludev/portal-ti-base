@@ -8,11 +8,11 @@ El HTML y CSS fueron ampliados y modificados para completar el caso de Nova Serv
 
 ## Aportes individuales
 
-| Archivo | Cambio | Evidencia |
-|---|---|---|
-| `index.html` | Ampliación de contenido: se incorporaron las cuatro áreas de servicio de Nova Servicios, cinco preguntas frecuentes en dos categorías y una sección de contacto con horario ficticio. | Secciones `#servicios`, `#preguntas` y `#contacto` del archivo final. |
-| `index.html` + `styles.css` | Mejora técnica: se añadieron `meta description`, estructura semántica completa, atributos de ayuda para controles, diseño mobile-first, Grid para tarjetas y Flexbox para navegación. | Metadatos del `<head>`, `header/nav/main/section/article/footer`, `.services__grid` y `.navbar`. |
-| `index.html` + `styles.css` | Corrección detectada durante pruebas: el formulario no explicaba de forma suficientemente directa qué ocurría con los datos; ahora el aviso aparece junto al formulario y la confirmación de `ui.js` declara explícitamente que no se envió ni guardó información. También se añadieron ayudas visibles para tipo, prioridad y descripción. | `.form-note`, ayudas `*-help` y `#form-status`; comprobado en la prueba válida. |
+| Archivo                     | Cambio                                                                                                                                                                                                                                                                                                                                      | Evidencia                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `index.html`                | Ampliación de contenido: se incorporaron las cuatro áreas de servicio de Nova Servicios, cinco preguntas frecuentes en dos categorías y una sección de contacto con horario ficticio.                                                                                                                                                       | Secciones `#servicios`, `#preguntas` y `#contacto` del archivo final.                            |
+| `index.html` + `styles.css` | Mejora técnica: se añadieron `meta description`, estructura semántica completa, atributos de ayuda para controles, diseño mobile-first, Grid para tarjetas y Flexbox para navegación.                                                                                                                                                       | Metadatos del `<head>`, `header/nav/main/section/article/footer`, `.services__grid` y `.navbar`. |
+| `index.html` + `styles.css` | Corrección detectada durante pruebas: el formulario no explicaba de forma suficientemente directa qué ocurría con los datos; ahora el aviso aparece junto al formulario y la confirmación de `ui.js` declara explícitamente que no se envió ni guardó información. También se añadieron ayudas visibles para tipo, prioridad y descripción. | `.form-note`, ayudas `*-help` y `#form-status`; comprobado en la prueba válida.                  |
 
 ## Dos problemas corregidos: antes y después
 
@@ -118,16 +118,16 @@ y la fecha 2026-09-30 14:32.
 Para vincular el evento con la solicitud, el registro de Auditoría
 debería identificar la entidad afectada y su clave primaria:
 
-| Dato | Valor |
-|---|---|
-| audit_id | 5004 |
-| user_id | 9 |
-| entidad | Solicitud |
-| entidad_id | 1002 |
-| accion | CAMBIO_PRIORIDAD |
-| fecha | 2026-09-30 14:32 |
-| valor_anterior | Media |
-| valor_nuevo | Alta |
+| Dato           | Valor            |
+| -------------- | ---------------- |
+| audit_id       | 5004             |
+| user_id        | 9                |
+| entidad        | Solicitud        |
+| entidad_id     | 1002             |
+| accion         | CAMBIO_PRIORIDAD |
+| fecha          | 2026-09-30 14:32 |
+| valor_anterior | Media            |
+| valor_nuevo    | Alta             |
 
 Los valores de entidad, entidad_id, valor_anterior y valor_nuevo
 representan cómo debería documentarse el cambio descrito en el
