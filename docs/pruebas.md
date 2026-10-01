@@ -1,21 +1,36 @@
-# Pruebas — Nova Servicios
+# Pruebas del portal Nova Servicios
 
-| ID | Prueba | Resultado obtenido | Estado | Ruta de evidencia |
-|---|---|---|---|---|
-| P01 | Navegación y semántica | Los enlaces principales apuntan a `#inicio`, `#servicios`, `#preguntas`, `#contacto` y `#soporte`. El CTA del inicio llega al formulario en 1 clic. Se detecta un `h1` y existen `header`, `nav`, `main`, `section`, `article` y `footer`. | Cumple | `index.html`; comprobación automatizada |
-| P02 | Móvil de 320 px | Se cargó la página a 320 px y se verificó ausencia de overflow horizontal y existencia del formulario. Se guardó captura completa. | Cumple | `docs/capturas/320px.png` |
-| P03 | Tablet de 768 px | Se cargó la página a 768 px; navegación horizontal, tarjetas y formulario permanecen dentro del viewport. Se guardó captura completa. | Cumple | `docs/capturas/768px.png` |
-| P04 | Escritorio de 1440 px | Se cargó la página a 1440 px; contenido con ancho controlado y recursos locales cargados. Se guardó captura completa. | Cumple | `evidencias/1440px.png` |
-| P05 | Teclado y zoom | Se verificó mediante automatización que los elementos interactivos reciben foco y que el botón del menú existe para viewport móvil. La prueba manual de recorrido completo con Tab/Shift+Tab y zoom al 200 % queda pendiente de demostración. | No ejecutada | `README.md`; pendiente de comprobación manual |
-| P06 | Formulario inválido | Se comprobaron vacío, nombre de 2 caracteres, `usuario@`, tipo sin seleccionar, prioridad sin seleccionar y descripción de 9 caracteres. Para el máximo se intentó introducir 501 caracteres: el control con `maxlength="500"` limita el valor a 500 caracteres, y se verificó una longitud efectiva de 500. | Cumple | `docs/capturas/formulario-invalido.png` |
-| P07 | Formulario válido | Con Ana Pérez, `ana@example.test`, Hardware, Media y una descripción de al menos 10 caracteres, la validación permite el submit y aparece el mensaje de simulación: no se envió ni guardó ningún ticket. | Cumple | `docs/capturas/formulario-valido.png` |
-| P08 | Calidad y Preview | Metadatos, estructura, recursos y foco básico fueron inspeccionados. **Lighthouse no se ejecutó** en este entorno, por lo que no se registran puntuaciones. | No ejecutada | `docs/pruebas.md`; ejecutar Lighthouse sobre el Preview de Vercel |
+## Pruebas 1
 
-## Verificaciones adicionales
+| ID | Prueba | Resultado observado | Evidencia |
+|---|---|---|---|
+| P01 | Anchos de 320, 768 y 1440 px | No se observó desbordamiento horizontal de toda la página en ninguno de los tres anchos. Con la barra de desplazamiento vertical, el ancho disponible fue de 305, 753 y 1425 px, respectivamente; el ancho desplazable coincidió en cada caso. | `docs/evidencias/vista-320px.png`, `docs/evidencias/vista-768px.png`, `docs/evidencias/vista-1440px.png` |
+| P02 | Tabla de estados en móvil | La tabla permite desplazamiento dentro de su propio contenedor, sin ensanchar toda la página. | `docs/evidencias/vista-320px.png` |
+| P03 | Foco de teclado | El enlace «Solicitar soporte» del inicio mostró un contorno de 3 px al recibir foco con Tab. | `docs/evidencias/foco-teclado.jpg` |
+| P04 | Menú móvil | A 320 px, Escape cerró el menú y devolvió el foco al botón Menú. | Observación en navegador; `docs/evidencias/menu-movil-despues.jpg` muestra la disposición abierta. |
+| P05 | Formulario inválido | Con el nombre «An», de dos caracteres, `validity.tooShort` fue verdadero, se señaló el campo inválido y no apareció la confirmación. | `docs/evidencias/formulario-invalido.jpg` |
+| P06 | Formulario válido | Con Ana Pérez, `ana@example.test`, Hardware, prioridad Media y una descripción válida, se mostró «Validación completada. No se envió ni guardó ningún ticket.». | `docs/evidencias/formulario-valido.jpg` |
+| P07 | Retroceso con teclado | Shift+Tab desde el botón del formulario devolvió el foco al campo de descripción, con indicador visible. | Observación en navegador; sin captura independiente. |
+| P08 | Contraste del enlace de navegación con foco | Antes del cambio, el texto oscuro sobre el fondo semitransparente oscuro tenía un contraste calculado de 1.44:1; después, texto RGB(18, 32, 51) sobre amarillo RGB(244, 185, 66) alcanzó 9.27:1 y conservó el contorno de foco. | `docs/evidencias/contraste-boton-antes.jpg`, `docs/evidencias/contraste-boton-despues.jpg` |
+| P09 | Hover del enlace de navegación corregido | Se observó `:hover` activo con texto oscuro sobre fondo amarillo; los colores coincidieron con el estado de foco. | Observación en navegador; sin captura independiente. |
 
-- **320 px:** sin scroll horizontal detectado.
-- **768 px:** menú en una fila y tarjetas adaptadas mediante Grid.
-- **1440 px:** catálogo en cuatro columnas, con tarjeta destacada ocupando dos columnas.
-- **Validación nativa:** no se utiliza `novalidate`.
-- **Simulación:** `ui.js` conserva `preventDefault()` y muestra que no se envió ni guardó ningún ticket.
-- **Datos:** todos los datos de contacto, correo, teléfono y horario son ficticios.
+Las capturas completas de las vistas a 320, 768 y 1440 px conservan esos anchos originales. La captura del formulario válido y las capturas de contraste se redujeron proporcionalmente para mostrarlas, por lo que la evidencia de los tres anchos corresponde a las tres capturas completas, no a los recortes de controles.
+
+## Pruebas 2
+
+
+| ID | Prueba | Resultado reportado | Tipo de evidencia |
+|---|---|---|---|
+| M01 | Zoom real del navegador al 200 % | No encontró problemas durante la revisión del portal. | Informe manual del estudiante; no se adjuntó captura específica. |
+| M02 | Tab y Shift+Tab | Recorrió el portal sin problemas reportados. | Informe manual del estudiante. |
+| M03 | Enter y Escape | Comprobó su funcionamiento sin problemas reportados. | Informe manual del estudiante. |
+| M04 | Foco en «Solicitar soporte» del menú | Envió una captura en la conversación que muestra el fondo amarillo, el texto legible y el contorno de foco. | Captura del estudiante; conservar una copia en el proyecto si se desea incluirla en el ZIP. |
+
+Estas pruebas complementan las observaciones P03, P04, P07 y P08.
+
+## Dos correcciones reales: antes y después
+
+| Corrección | Problema detectado | Cambio y verificación | Capturas |
+|---|---|---|---|
+| C01: distribución del menú móvil | A 320 px, logo, botón y enlaces quedaban apretados en una misma fila al abrir el menú. | `flex-wrap: wrap` permite que el menú ocupe la fila inferior en móvil; `nowrap` conserva la disposición horizontal desde 768 px. Se comprobó que la página no se desbordó horizontalmente. | `docs/evidencias/menu-movil-antes.jpg`, `docs/evidencias/menu-movil-despues.jpg` |
+| C02: contraste del botón de navegación | Al recibir foco, una regla general reemplazaba su amarillo por fondo oscuro semitransparente y el texto oscuro resultaba difícil de leer. | Una regla específica para hover/foco conserva amarillo y texto oscuro; el contraste calculado pasó de 1.44:1 a 9.27:1 y permaneció el contorno de foco. | `docs/evidencias/contraste-boton-antes.jpg`, `docs/evidencias/contraste-boton-despues.jpg` |
