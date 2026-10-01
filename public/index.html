@@ -29,6 +29,8 @@
         <ul class="navbar__menu" id="nav-menu">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#soporte">Soporte</a></li>
+          <li><a href="#estados">Estados</a></li>
           <li><a href="#preguntas">Preguntas frecuentes</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a class="nav-cta" href="#soporte">Solicitar soporte</a></li>
@@ -178,6 +180,71 @@
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
             <noscript>Activa JavaScript para ejecutar la confirmación de esta simulación.</noscript>
           </form>
+        </div>
+      </section>
+
+      <section class="section" id="estados" aria-labelledby="states-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Seguimiento</p>
+            <h2 id="states-title">Estados de solicitudes</h2>
+            <p>
+              Ejemplos ficticios de solicitudes para mostrar cómo podría visualizarse
+              el estado de atención de un caso.
+            </p>
+          </div>
+
+          <div class="states-table-wrapper">
+            <table class="states-table">
+              <caption>
+                Solicitudes ficticias de Nova Servicios
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Solicitud</th>
+                  <th scope="col">Servicio</th>
+                  <th scope="col">Prioridad</th>
+                  <th scope="col">Estado</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1001</td>
+                  <td>Hardware</td>
+                  <td>Alta</td>
+                  <td><span class="status status--pending">Pendiente</span></td>
+                </tr>
+
+                <tr>
+                  <td>1002</td>
+                  <td>Software</td>
+                  <td>Alta</td>
+                  <td><span class="status status--progress">En proceso</span></td>
+                </tr>
+
+                <tr>
+                  <td>1005</td>
+                  <td>Conectividad y red</td>
+                  <td>Media</td>
+                  <td><span class="status status--resolved">Resuelto</span></td>
+                </tr>
+
+                <tr>
+                  <td>1010</td>
+                  <td>Accesos y cuentas</td>
+                  <td>Baja</td>
+                  <td><span class="status status--closed">Cerrado/Cancelado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section-note">
+            <strong>Nota:</strong> todos los registros mostrados son ficticios y
+            forman parte de la demostración académica.
+          </p>
         </div>
       </section>
 

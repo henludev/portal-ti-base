@@ -161,6 +161,77 @@ input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: v
 button:disabled { cursor: not-allowed; opacity: 0.65; }
 .form-status { min-height: 1.6rem; margin: 0; color: var(--color-success); font-weight: 800; }
 
+.states-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.states-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.states-table caption {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+.states-table th,
+.states-table td {
+  padding: 0.8rem;
+  border-top: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.states-table th {
+  background: #eef3f8;
+  font-weight: 800;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status--pending {
+  background: #fff1c7;
+  color: #704d00;
+}
+
+.status--progress {
+  background: #dceaff;
+  color: #174ea6;
+}
+
+.status--resolved {
+  background: #dff4e7;
+  color: #176b3a;
+}
+
+.status--closed {
+  background: #e8ebef;
+  color: #394554;
+}
+
+.section-note {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
 .faq-grid { display: grid; gap: 1rem; }
 .faq-category { padding: 1.25rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); }
 .faq-category > h3 { margin-bottom: 1.25rem; }
